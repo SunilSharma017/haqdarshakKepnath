@@ -103,7 +103,7 @@ import MySQLdb
 SSH_HOST = '13.127.164.68'
 SSH_PORT = 22
 SSH_USER = 'ubuntu'
-SSH_PRIVATE_KEY_PATH = r"C:\Users\Admin\Downloads\data-poc (1).pem"
+SSH_PRIVATE_KEY_PATH = os.path.join(BASE_DIR, 'keys','data-poc (1).pem')
 
 # MySQL configuration
 MYSQL_HOST = '10.10.0.52'
