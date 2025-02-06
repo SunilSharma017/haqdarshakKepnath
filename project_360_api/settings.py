@@ -131,7 +131,7 @@ DATABASES = {
         'NAME': MYSQL_DB,
         'USER': MYSQL_USER,
         'PASSWORD': MYSQL_PASSWORD,
-        'HOST': '127.0.0.1',  # Use the local end of the SSH tunnel
+        'HOST': 'localhost',  # Use the local end of the SSH tunnel
         'PORT': tunnel.local_bind_port,  # Use the local bound port from the tunnel
     }
 }
@@ -139,7 +139,7 @@ DATABASES = {
 # Close the SSH tunnel when Django shuts down
 import atexit
 atexit.register(tunnel.stop)
-
+print(f"Using private key: {SSH_PRIVATE_KEY_PATH}")
 
 
 # Password validation
@@ -176,7 +176,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
