@@ -131,7 +131,7 @@ DATABASES = {
         'NAME': MYSQL_DB,
         'USER': MYSQL_USER,
         'PASSWORD': MYSQL_PASSWORD,
-        'HOST': 'localhost',  # Use the local end of the SSH tunnel
+        'HOST': os.getenv(MYSQL_HOST,'localhost'),
         'PORT': tunnel.local_bind_port,  # Use the local bound port from the tunnel
     }
 }
