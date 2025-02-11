@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 class project_summary(models.Model):
     project_name = models.CharField(max_length=100)
     scheme_name = models.CharField(max_length=100)
