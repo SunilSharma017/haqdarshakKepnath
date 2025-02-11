@@ -71,7 +71,7 @@ MYSQL_DB = 'haqdarshak-aggregates'
 
 # SSH Tunnel setup
 tunnel = SSHTunnelForwarder(
-    (SSH_HOST, SSH_PORT),
+    (MYSQL_HOST, MYSQL_PORT),
     ssh_username=SSH_USER,
     ssh_pkey=SSH_PRIVATE_KEY_PATH,
     remote_bind_address=(MYSQL_HOST, MYSQL_PORT),
